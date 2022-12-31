@@ -1,0 +1,53 @@
+Scenario:
+You are a data engineer at a data analytics consulting company. You have been assigned to a project that aims to de-congest the national highways by analyzing the road traffic data from different toll plazas. Each highway is operated by a different toll operator with a different IT setup that uses different file formats. Your job is to collect data available in different formats and consolidate it into a single file.
+
+Objectives:
+In this assignment you will author an Apache Airflow DAG that will:
+
+1.Extract data from a csv file
+2.Extract data from a tsv file
+3.Extract data from a fixed width file
+4.Transform the data
+5.Load the transformed data into the staging area
+
+Exercise 1 - Prepare the lab environment
+
+	Before you start the assignment:
+
+	Start Apache Airflow.
+	Download the dataset from the source to the destination mentioned below.
+	Note: While downloading the file in the terminal use the sudo command before the command used to download the file.
+
+	Source : https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Final	%20Assignment/tolldata.tgz
+
+	Destination : /home/project/airflow/dags/finalassignment
+
+	Create a directory structure for staging area as follows
+	/home/project/airflow/dags/finalassignment/staging.
+
+	Step 1: enter the command cd airflow/dags in the terminal to change the directory to the /home/project/airflow/dags .
+		1. cd airflow/dags
+
+	Step 2: Next enter the below given commands to create the directories finalassignment and staging
+		1. sudo mkdir finalassignment
+		2. cd finalassignment
+		3. sudo mkdir staging
+		4. cd staging
+
+Exercise 2 - Create a DAG
+	Task 1.1 - Define DAG arguments
+	Task 1.2 - Define the DAG
+	Task 1.3 - Create a task to unzip data
+	Task 1.4 - Create a task to extract data from csv file
+	Task 1.5 - Create a task to extract data from tsv file
+	Task 1.6 - Create a task to extract data from fixed width file
+	Task 1.7 - Create a task to consolidate data extracted from previous tasks
+	Task 1.8 - Transform and load the data
+	Task 1.9 - Define the task pipeline
+
+Exercise 3 - Getting the DAG operational.
+	Task 1.10 - Submit the DAG
+		--> airflow dags list | grep ETL_toll_data
+	Task 1.11 - Pause/Unpause the DAG
+		--> airflow dags pause ETL_toll_data
+		--> airflow dags unpause ETL_toll_data
