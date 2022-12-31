@@ -44,9 +44,11 @@ Exercise 2 - Create a DAG
 	Task 1.7 - Create a task to consolidate data extracted from previous tasks
 	Task 1.8 - Transform and load the data
 	Task 1.9 - Define the task pipeline
+	
+	Note : Task 1.1 to Task 1.9 answered in ETL_toll_data.py
 
 Exercise 3 - Getting the DAG operational.
-	Task 1.10 - Submit the DAG
+	Task 1.10 - View DAG in dags list
 		--> airflow dags list | grep ETL_toll_data
 	Task 1.11 - Pause/Unpause the DAG
 		--> airflow dags pause ETL_toll_data
